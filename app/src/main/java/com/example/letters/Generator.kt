@@ -6,7 +6,9 @@ public class Generator {
         val name: String,
         val isVowel: Boolean,
         val isSoftening: Boolean
-    )
+    ) {
+
+    }
 
     val letters: List<Letter> = listOf(
         Letter("А", true, false),
