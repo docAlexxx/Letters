@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/teal_200">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:srcCompat="@drawable/dinos5"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_new_letter3"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="50dp"
+        android:text="Новый слог"
+        android:textSize="30sp"
+        app:cornerRadius="100dp"
+        android:backgroundTint="#1DF116"/>
+
+    <TextView
+        android:id="@+id/tv_first_letter3"
+        android:layout_width="133dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="5dp"
+        app:layout_constraintTop_toBottomOf="@+id/btn_new_letter3"
+        app:layout_constraintEnd_toStartOf="@+id/tv_second_letter3"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="У"
+        android:textSize="150sp"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/tv_second_letter3"
+        android:layout_width="133dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintTop_toBottomOf="@+id/btn_new_letter3"
+        app:layout_constraintStart_toEndOf="@+id/tv_first_letter3"
+        app:layout_constraintEnd_toStartOf="@+id/tv_third_letter3"
+        android:text="Р"
+        android:textSize="150sp"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/tv_third_letter3"
+        android:layout_width="133dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintTop_toBottomOf="@+id/btn_new_letter3"
+        app:layout_constraintStart_toEndOf="@+id/tv_second_letter3"
+        android:text="А"
+        android:textSize="150sp"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textStyle="bold"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
