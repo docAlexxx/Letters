@@ -3,7 +3,7 @@ package com.example.letters
 public class Generator {
 
     data class Letter(
-        val name: String,
+        var name: String,
         val isVowel: Boolean,
         val isSoftening: Boolean
     ) {
@@ -49,13 +49,13 @@ public class Generator {
 
     fun generateLetter(startLetter:Int,endLetter:Int):Letter {
         return    letters[(startLetter..endLetter).random()]
-
-
     }
 
+    fun getABCLetter(index:Int):String {
+        return   lettersABC[index]
+    }
 
-
-    val letters2: Array<String> = arrayOf(
+    val lettersABC: Array<String> = arrayOf(
         "А",
         "Б",
         "В",

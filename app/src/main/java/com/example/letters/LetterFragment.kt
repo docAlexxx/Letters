@@ -7,6 +7,9 @@ import com.example.letters.databinding.FragmentLetterBinding
 
 class LetterFragment : BindingFragment<FragmentLetterBinding>(FragmentLetterBinding::inflate) {
 
+    var indexABC = -1
+    lateinit var letter: Generator.Letter
+
     private val generate: Generator by lazy {
         Generator()
     }
@@ -23,6 +26,9 @@ class LetterFragment : BindingFragment<FragmentLetterBinding>(FragmentLetterBind
         binding.btnNewLetter.setOnClickListener {
             getLetter()
         }
+        binding.btnAbcLetter.setOnClickListener {
+            getLetterABC()
+        }
 
     }
 
@@ -36,6 +42,28 @@ class LetterFragment : BindingFragment<FragmentLetterBinding>(FragmentLetterBind
                 tvLetter.setTextColor(Color.parseColor("#0729E6"))
             }
         }
+    }
+
+    fun getLetterABC() {
+        indexABC++
+
+        if (indexABC == 33) {
+            indexABC = 0
+        }
+
+        var letterABC = generate.getABCLetter(indexABC)
+
+        binding.tvLetter.text = letterABC
+
+        with(binding) {
+            if (letterABC == "А" || letterABC == "О" || letterABC == "У" || letterABC == "Ы" || letterABC == "Э" || letterABC == "Е" || letterABC == "Ё" || letterABC == "И" || letterABC == "Ю" || letterABC == "Я") {
+                tvLetter.setTextColor(Color.parseColor("#FF0000"))
+            } else {
+                tvLetter.setTextColor(Color.parseColor("#0729E6"))
+            }
+        }
+
+
     }
 
 
