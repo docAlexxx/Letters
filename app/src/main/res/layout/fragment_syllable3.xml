@@ -40,7 +40,7 @@
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textStyle="bold"
-        android:fontFamily="sans-serif-medium"/>
+        android:fontFamily="arial"/>
 
     <TextView
         android:id="@+id/tv_second_letter3"
@@ -57,7 +57,7 @@
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textStyle="bold"
-        android:fontFamily="sans-serif-medium"/>
+        android:fontFamily="arial"/>
 
     <TextView
         android:id="@+id/tv_third_letter3"
@@ -73,7 +73,7 @@
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textStyle="bold"
-        android:fontFamily="sans-serif-medium"/>
+        android:fontFamily="arial"/>
 
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton

@@ -51,7 +51,8 @@
         android:textAlignment="center"
         android:textColor="#0729E6"
         android:textStyle="bold"
-        android:fontFamily="sans-serif-medium"/>
+        android:fontFamily="arial"
+        />
 
 
 
