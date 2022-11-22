@@ -1,5 +1,6 @@
 package com.example.letters
 
+import android.animation.ObjectAnimator
 import android.graphics.Color
 import android.os.Bundle
 import android.view.View
@@ -7,6 +8,8 @@ import com.example.letters.databinding.FragmentSyllableBinding
 
 class SyllableFragment :
     BindingFragment<FragmentSyllableBinding>(FragmentSyllableBinding::inflate) {
+
+    private val duration = 1000L
 
     private val generate: Generator by lazy {
         Generator()
@@ -17,11 +20,34 @@ class SyllableFragment :
 
         getLetters()
         setButton()
-
+        binding.tvLettercounter.text=sellyableCount.toString()
     }
+
+    fun animateViews(
+        start: Float,
+        rotate: Float,
+        startMove: Float,
+        endMove: Float,
+        midMove:Float,
+        midMove2:Float,
+    ) {
+        ObjectAnimator.ofFloat(binding.dinoImageview, View.ROTATION, start, rotate)
+            .setDuration(duration).start()
+        ObjectAnimator.ofFloat(binding.dinoImageview, View.TRANSLATION_X, startMove, endMove,startMove)
+            .setDuration(duration).start()
+        ObjectAnimator.ofFloat(binding.dinoImageview, View.TRANSLATION_Y, startMove, midMove,startMove,midMove2,startMove)
+            .setDuration(duration).start()
+    }
+
 
     fun setButton() {
         binding.btnNewSellyable.setOnClickListener {
+            getLetters()
+        }
+        binding.fab.setOnClickListener {
+            animateViews(0f,720f,0f,500f,-100f,100f)
+            generate.countRiser("sellyable")
+            binding.tvLettercounter.text=sellyableCount.toString()
             getLetters()
         }
 

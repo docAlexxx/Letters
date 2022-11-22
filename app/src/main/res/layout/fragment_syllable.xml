@@ -58,4 +58,44 @@
         android:textColor="@color/black"
         android:fontFamily="sans-serif-medium"/>
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="16dp"
+        android:layout_marginStart="100dp"
+        android:elevation="5dp"
+        app:rippleColor="@color/red"
+        android:backgroundTint="@color/white"/>
+
+    <ImageView
+        android:id="@+id/dino_imageview"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="bottom|end"
+        android:elevation="10dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginStart="100dp"
+        app:srcCompat="@drawable/fab"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_lettercounter"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/fab"
+        android:text="0"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-medium"
+        android:textSize="60sp"
+        android:gravity="center"
+        android:textColor="@color/red"
+        />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

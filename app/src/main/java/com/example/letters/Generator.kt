@@ -2,13 +2,12 @@ package com.example.letters
 
 public class Generator {
 
+
     data class Letter(
         var name: String,
         val isVowel: Boolean,
         val isSoftening: Boolean
-    ) {
-
-    }
+    )
 
     val letters: List<Letter> = listOf(
         Letter("А", true, false),
@@ -53,6 +52,15 @@ public class Generator {
 
     fun getABCLetter(index:Int):String {
         return   lettersABC[index]
+    }
+
+    fun countRiser (name: String):Int {
+        when (name) {
+            "letter" -> return ++letterCount
+            "sellyable" -> return ++sellyableCount
+            "sellyable3" -> return ++sellyableCount3
+            else -> return 0
+        }
     }
 
     val lettersABC: Array<String> = arrayOf(
