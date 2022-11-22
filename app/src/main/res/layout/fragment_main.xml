@@ -12,7 +12,9 @@
         app:srcCompat="@drawable/fon4" />
 
     <androidx.appcompat.widget.AppCompatImageView
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.3"
         android:layout_height="wrap_content"
         android:layout_marginTop="-20dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -21,7 +23,9 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_letter"
-        android:layout_width="300dp"
+        android:layout_width="0dp"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.70"
         android:layout_height="100dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="100dp"
@@ -33,7 +37,9 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatImageView
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.4"
         android:layout_height="wrap_content"
         android:layout_marginTop="-20dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -42,22 +48,27 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_sellyable"
-        android:layout_width="300dp"
+        android:layout_width="0dp"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.7"
         android:layout_height="100dp"
-        android:layout_marginTop="120dp"
+
         android:layout_marginEnd="10dp"
         android:backgroundTint="@color/red"
         android:text="слоги из двух букв"
         android:textSize="30sp"
         app:cornerRadius="10dp"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_letter" />
+        app:layout_constraintBottom_toBottomOf="parent" />
 
     <androidx.appcompat.widget.AppCompatImageView
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.4"
         android:layout_height="wrap_content"
         android:layout_marginTop="-30dp"
-        android:layout_marginEnd="-10dp"
+        android:layout_marginEnd="-20dp"
         android:scaleX="0.8"
         android:scaleY="0.8"
         app:layout_constraintEnd_toEndOf="parent"
@@ -66,15 +77,17 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_sellyable3"
-        android:layout_width="300dp"
+        android:layout_width="0dp"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.7"
         android:layout_height="100dp"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="120dp"
+        android:layout_marginBottom="100dp"
         android:backgroundTint="#1DF116"
         android:text="слоги из трех букв"
         android:textSize="30sp"
         app:cornerRadius="10dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_sellyable" />
+        app:layout_constraintBottom_toBottomOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -50,7 +50,8 @@
         android:textSize="170sp"
         android:textAlignment="center"
         android:textColor="#0729E6"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-medium"/>
 
 
 
