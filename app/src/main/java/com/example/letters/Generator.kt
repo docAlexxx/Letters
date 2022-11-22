@@ -47,7 +47,8 @@ public class Generator {
         )
 
     fun generateLetter(startLetter:Int,endLetter:Int):Letter {
-        return    letters[(startLetter..endLetter).random()]
+      //  return    letters[(startLetter..endLetter).random()]
+        return    letters[ (startLetter..endLetter).shuffled().last()]
     }
 
     fun getABCLetter(index:Int):String {

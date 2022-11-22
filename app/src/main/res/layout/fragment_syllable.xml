@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="96dp"
         android:scaleX="1.2"
-        android:scaleY="1.5"
+        android:scaleY="1.7"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/dinos4"
         android:layout_marginTop="235dp" />
@@ -84,7 +84,7 @@
 
     <TextView
         android:id="@+id/tv_lettercounter"
-        android:layout_width="70dp"
+        android:layout_width="120dp"
         android:layout_height="70dp"
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginBottom="16dp"
