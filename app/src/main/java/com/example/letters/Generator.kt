@@ -26,7 +26,7 @@ public class Generator {
         Letter("Д", false, false),
         Letter("Ж", false, false),
         Letter("З", false, false),
-        Letter("Й", false, false),
+
         Letter("К", false, false),
         Letter("Л", false, false),
         Letter("М", false, false),
@@ -41,6 +41,7 @@ public class Generator {
         Letter("Ч", false, false),
         Letter("Ш", false, false),
         Letter("Щ", false, false),
+        Letter("Й", false, false),
         Letter("Ъ", false, false),
         Letter("Ь", false, false),
 

@@ -92,7 +92,7 @@
         app:layout_constraintStart_toEndOf="@+id/fab"
         android:text="0"
         android:textStyle="bold"
-        android:fontFamily="sans-serif-medium"
+        android:fontFamily="arial"
         android:textSize="60sp"
         android:gravity="center"
         android:textColor="@color/red"

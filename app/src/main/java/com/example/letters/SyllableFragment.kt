@@ -3,8 +3,10 @@ package com.example.letters
 import android.animation.ObjectAnimator
 import android.graphics.Color
 import android.os.Bundle
+import android.os.Handler
 import android.view.View
 import com.example.letters.databinding.FragmentSyllableBinding
+import kotlinx.coroutines.delay
 
 class SyllableFragment :
     BindingFragment<FragmentSyllableBinding>(FragmentSyllableBinding::inflate) {
@@ -14,6 +16,10 @@ class SyllableFragment :
     private val generate: Generator by lazy {
         Generator()
     }
+
+    lateinit var letterFirst: Generator.Letter
+    lateinit var letterSecond: Generator.Letter
+
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -46,9 +52,40 @@ class SyllableFragment :
         }
         binding.fab.setOnClickListener {
             animateViews(0f,720f,0f,500f,-100f,100f)
-            generate.countRiser("sellyable")
-            binding.tvLettercounter.text=sellyableCount.toString()
-            getLetters()
+            Handler().postDelayed(Runnable {
+                generate.countRiser("sellyable")
+                binding.tvLettercounter.text=sellyableCount.toString()
+                getLetters()
+            }, duration/2)
+
+        }
+
+    }
+
+    fun checkLetters() {
+
+        if (letterFirst.name + letterSecond.name == "ЁБ") {
+            letterFirst = generate.generateLetter(0, 2)
+        }
+
+
+        if (letterFirst.name == "Ч" || letterFirst.name == "Щ"|| letterFirst.name == "Ж" || letterFirst.name == "Ш") {
+            if (letterSecond.name == "Я") {
+                letterSecond = generate.generateLetter(0, 0)
+            }
+            if (letterSecond.name == "Ю") {
+                letterSecond = generate.generateLetter(2, 2)
+            }
+            if (letterSecond.name == "Ы") {
+                letterSecond = generate.generateLetter(7, 7)
+            }
+            if (letterSecond.name == "Ё") {
+                letterSecond = generate.generateLetter(1, 1)
+            }
+            if (letterSecond.name == "Э") {
+                letterSecond = generate.generateLetter(5, 5)
+            }
+
         }
 
     }
@@ -56,16 +93,16 @@ class SyllableFragment :
     fun getLetters() {
 
         val query=(1..5).random()
-        val letterFirst : Generator.Letter
-        val letterSecond : Generator.Letter
 
         if (query > 3) {
             letterFirst = generate.generateLetter(0, 9)
             letterSecond = generate.generateLetter(10, 30)
         } else {
             letterSecond = generate.generateLetter(0, 9)
-            letterFirst = generate.generateLetter(10, 30)
+            letterFirst = generate.generateLetter(10, 29)
         }
+
+        checkLetters()
 
         with(binding) {
             tvFirstLetter.text = letterFirst.name
